@@ -18,16 +18,8 @@ app.use(express.json())
 //End points
 app.get('/', ctrl.main)
 //takes a color in and sends it back 
-app.post('/color', (req, res) => {
-    let color = req.body.color
-    console.log(color)
-    res.status(200).send(color)
-})
-
-app.get('/error', (req, res) => {
-    color()
-    res.status(200).send('good')
-}) 
+app.post('/color', ctrl.color)
+app.get('/error', ctrl.error)
 
 
 
