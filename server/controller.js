@@ -22,7 +22,7 @@ module.exports = {
         try{
             color()
         } catch (err) {
-            (rollbar.log(err))
+            (rollbar.error(err))
         }
     
         res.status(200).send('good')
