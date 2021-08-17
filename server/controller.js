@@ -19,10 +19,11 @@ module.exports = {
     },
     error: (req, res) => {
         rollbar.log("this")
-        .try(
-        color()
-        )
-        .catch( console.log("error"))
+        try{
+            color()
+        } catch { (console.log("error"))
+        }
+    
         res.status(200).send('good')
     } 
 }
