@@ -25,6 +25,6 @@ module.exports = {
             console.log(err)
             rollbar.error(err)
         }
-        res.status(200).send('good')
+       
     } 
 }
