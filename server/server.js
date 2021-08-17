@@ -7,7 +7,6 @@ const cors = require('cors')
 
 
 app.use(cors())
-app.use(express.static('public'))
 app.use(express.json())
 
 //End points
@@ -16,6 +15,7 @@ app.get('/', ctrl.main)
 app.post('/color', ctrl.color)
 app.get('/error', ctrl.error)
 
+app.use(express.static('public'))
 
 
 app.listen(port, () => console.log(`Server on ${port}`))

@@ -1,8 +1,3 @@
-//const { default: axios } = require("axios")
-
-
-//const baseUrl = 'http://localhost:5050/'
-
 
 const pickColor = () => {
     const body = {
