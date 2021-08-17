@@ -21,7 +21,8 @@ module.exports = {
         rollbar.log("this")
         try{
             color()
-        } catch { (console.log("error"))
+        } catch (err) {
+            (rollbar.log(err))
         }
     
         res.status(200).send('good')
