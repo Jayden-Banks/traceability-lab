@@ -14,14 +14,27 @@ var rollbar = new Rollbar({
 
 app.use(express.json())
 
+
+
+
+
+
+//End points
 app.get('/', (req, res) => {
     rollbar.log("Hello world!");
     res.sendFile(path.join(__dirname, '/public/index.html'))
 })
+//takes a color in and sends it back 
+app.post('/color', (req, res) => {
+    let color = req.body.color
+    console.log(color)
+    res.status(200).send(color)
+})
 
 app.get('/api/color', (req, res) => {
     color()
-})
+    res.status(400).send('Error')
+}) 
 
 
 
