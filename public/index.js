@@ -1,4 +1,6 @@
-const baseURL = 'http://localhost:5050/'
+
+// const baseURL = 'http://localhost:5050/'
+const baseUrl = 'https://traceability-lab21.herokuapp.com'
 
 
 const pickColor = () => {
