@@ -18,6 +18,7 @@ module.exports = {
         res.status(200).send(color)
     },
     error: (req, res) => {
+        rollbar.log("this")
         color()
         res.status(200).send('good')
     } 
