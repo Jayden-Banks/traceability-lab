@@ -15,11 +15,6 @@ const port = process.env.PORT || 5050
 app.use(express.static('public'))
 app.use(express.json())
 
-
-
-
-
-
 //End points
 app.get('/', (req, res) => {
     //rollbar.log("Hello world!");
