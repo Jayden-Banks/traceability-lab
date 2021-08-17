@@ -6,7 +6,7 @@ const pickColor = () => {
         color: 'white'
     }
     axios.post(baseURL + 'color', body).then(res => {
-        console.log(response.data)
+        console.log(res.data)
     })
 }
 
