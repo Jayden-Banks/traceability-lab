@@ -19,6 +19,7 @@
         }
         axios.post('/color', body).then(res => {
             console.log(res.data)
+            document.querySelector('h2').textContent = res.data
     })
     }
 
