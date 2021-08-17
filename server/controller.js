@@ -1,3 +1,4 @@
+const { RSA_NO_PADDING } = require('constants');
 const path = require('path')
 
 const Rollbar = require("rollbar")
@@ -25,6 +26,6 @@ module.exports = {
             console.log(err)
             rollbar.error(err)
         }
-       
+        res.status(400).send('Issue')
     } 
 }
