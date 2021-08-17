@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const path = require('path')
+const ctrl = require('./controller.js')
 const port = process.env.PORT || 5050
 
 
@@ -16,10 +16,7 @@ app.use(express.static('public'))
 app.use(express.json())
 
 //End points
-app.get('/', (req, res) => {
-    //rollbar.log("Hello world!");
-    res.sendFile(path.join(__dirname, '../public/index.html'))
-})
+app.get('/', ctrl.main)
 //takes a color in and sends it back 
 app.post('/color', (req, res) => {
     let color = req.body.color
