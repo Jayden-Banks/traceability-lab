@@ -24,7 +24,7 @@ app.post('/color', (req, res) => {
     res.status(200).send(color)
 })
 
-app.get('/api/color', (req, res) => {
+app.get('/error', (req, res) => {
     color()
     res.status(200).send('good')
 }) 
