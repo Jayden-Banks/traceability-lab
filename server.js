@@ -11,12 +11,18 @@ var rollbar = new Rollbar({
 });
 
   // record a generic message and send it to Rollbar
-rollbar.log("Hello world!");
 
 app.use(express.json())
 
 app.get('/', (req, res) => {
+    rollbar.log("Hello world!");
     res.sendFile(path.join(__dirname, '/public/index.html'))
 })
+
+app.get('/api/color', (req, res) => {
+    color()
+})
+
+
 
 app.listen(port, () => console.log(`Server on ${port}`))
