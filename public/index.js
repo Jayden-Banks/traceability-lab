@@ -1,13 +1,13 @@
 
-// const baseURL = 'http://localhost:5050/'
-const baseUrl = 'https://traceability-lab21.herokuapp.com'
+const baseUrl = 'http://localhost:5050/'
+// const baseUrl = 'https://traceability-lab21.herokuapp.com'
 
 
 const pickColor = () => {
     const body = {
         color: 'white'
     }
-    axios.post(baseURL + 'color', body).then(res => {
+    axios.post(baseUrl + 'color', body).then(res => {
         console.log(res.data)
     })
 }
