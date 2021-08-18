@@ -4,6 +4,12 @@ const ctrl = require('./controller.js')
 const port = process.env.PORT || 5050
 const cors = require('cors')
 
+const Rollbar = require("rollbar")
+const rollbar = new Rollbar({
+    accessToken: 'cb3f3025dfe644e9b5d26d2d6b864677',
+    captureUncaught: true,
+    captureUnhandledRejections: true
+});
 
 
 app.use(cors())
