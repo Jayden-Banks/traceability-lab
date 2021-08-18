@@ -16,6 +16,6 @@ app.post('/color', ctrl.color)
 app.get('/error', ctrl.error)
 
 app.use(express.static('public'))
-
+app.use(rollbar.errorHandler())
 
 app.listen(port, () => console.log(`Server on ${port}`))
