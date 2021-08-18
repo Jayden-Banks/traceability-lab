@@ -16,6 +16,7 @@ module.exports = {
     color: (req, res) => {
         let color = req.body.color
         console.log(color)
+        rollbar.log('color added succesfully', {author: 'jayden'})
         res.status(200).send(color)
     },
     error: (req, res) => {
